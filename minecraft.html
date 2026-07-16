@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SPIRAL Craft — XYZEN CLOUD</title>
+<link rel="stylesheet" href="minecraft.css">
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="mc-loader">
+    <div class="mc-loader-inner">
+      <div class="mc-loader-mark">SPIRAL<span>CRAFT</span></div>
+      <div class="mc-loader-bar"><div class="mc-loader-bar-fill" id="mc-loader-fill"></div></div>
+      <div class="mc-loader-status" id="mc-loader-status">Generating world…</div>
+    </div>
+  </div>
+
+  <!-- ===================== START SCREEN ===================== -->
+  <div id="mc-start-screen" class="mc-hidden">
+    <div class="mc-start-card">
+      <div class="mc-loader-mark">SPIRAL<span>CRAFT</span></div>
+      <p class="mc-start-sub">A tiny voxel world built for XYZEN CLOUD</p>
+      <button id="mc-start-btn" class="mc-btn mc-btn-primary">Click to Play</button>
+      <div class="mc-start-controls" id="mc-start-controls-desktop">
+        <div><b>WASD</b> Move</div>
+        <div><b>Space</b> Jump</div>
+        <div><b>Mouse</b> Look</div>
+        <div><b>Left Click</b> Break</div>
+        <div><b>Right Click</b> Place</div>
+        <div><b>1-9</b> Hotbar</div>
+        <div><b>Shift</b> Sprint</div>
+        <div><b>Esc</b> Pause</div>
+      </div>
+      <a href="/" class="mc-exit-link">← Back to website</a>
+    </div>
+  </div>
+
+  <!-- ===================== GAME CANVAS ===================== -->
+  <canvas id="mc-canvas"></canvas>
+
+  <!-- ===================== HUD ===================== -->
+  <div id="mc-hud" class="mc-hidden">
+
+    <div class="mc-debug-panel">
+      <div id="mc-fps">FPS: 0</div>
+      <div id="mc-coords">X: 0 Y: 0 Z: 0</div>
+      <div id="mc-facing">Facing: N</div>
+    </div>
+
+    <div class="mc-crosshair">
+      <div class="mc-crosshair-h"></div>
+      <div class="mc-crosshair-v"></div>
+    </div>
+
+    <div class="mc-status-bars">
+      <div class="mc-hearts" id="mc-hearts"></div>
+      <div class="mc-hunger" id="mc-hunger"></div>
+    </div>
+
+    <div class="mc-hotbar" id="mc-hotbar"></div>
+
+    <button id="mc-pause-btn" class="mc-icon-btn" title="Pause">⏸</button>
+
+    <div id="mc-block-tooltip" class="mc-hidden"></div>
+
+    <!-- Mobile touch controls (Bedrock Edition style) -->
+    <div id="mc-touch-controls" class="mc-hidden">
+
+      <!-- Bottom-left: D-pad movement buttons (front/back/left/right in a
+           plus-sign pattern), replacing the joystick entirely -->
+      <div class="mc-dpad">
+        <button id="mc-move-forward" class="mc-dpad-btn mc-dpad-up" title="Forward">
+          <span class="mc-btn-icon">▲</span>
+        </button>
+        <button id="mc-move-left" class="mc-dpad-btn mc-dpad-left" title="Left">
+          <span class="mc-btn-icon">◀</span>
+        </button>
+        <button id="mc-move-right" class="mc-dpad-btn mc-dpad-right" title="Right">
+          <span class="mc-btn-icon">▶</span>
+        </button>
+        <button id="mc-move-back" class="mc-dpad-btn mc-dpad-down" title="Back">
+          <span class="mc-btn-icon">▼</span>
+        </button>
+      </div>
+
+      <!-- Right side: look area (invisible drag zone covering most of the
+           right half of the screen, exactly like Bedrock's camera control) -->
+      <div class="mc-look-zone" id="mc-joystick-look">
+        <div class="mc-joystick-knob mc-look-knob" id="mc-joystick-look-knob"></div>
+      </div>
+
+      <!-- Bottom-right stack: square action buttons like Bedrock's HUD -->
+      <div class="mc-action-cluster">
+        <button id="mc-touch-jump" class="mc-square-btn mc-square-btn-jump" title="Jump">
+          <span class="mc-btn-icon">⤒</span>
+        </button>
+        <div class="mc-action-row">
+          <button id="mc-touch-place" class="mc-square-btn" title="Place">
+            <span class="mc-btn-icon">▦</span>
+          </button>
+          <button id="mc-touch-inventory" class="mc-square-btn" title="Inventory">
+            <span class="mc-btn-icon">⊞</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Break/attack button floats centrally over the crosshair area,
+           matching Bedrock's tap-and-hold-to-mine button -->
+      <button id="mc-touch-break" class="mc-square-btn mc-break-btn" title="Break">
+        <span class="mc-btn-icon">⛏</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===================== PAUSE MENU ===================== -->
+  <div id="mc-pause-menu" class="mc-hidden">
+    <div class="mc-pause-card">
+      <div class="mc-loader-mark" style="font-size:1.6rem;">SPIRAL<span>CRAFT</span></div>
+      <h2>Game Paused</h2>
+      <button id="mc-resume-btn" class="mc-btn mc-btn-primary">Resume</button>
+      <button id="mc-fullscreen-btn" class="mc-btn mc-btn-ghost">Toggle Fullscreen</button>
+      <a href="/" class="mc-btn mc-btn-exit">Exit Game</a>
+    </div>
+  </div>
+
+  <!-- ===================== DEATH SCREEN ===================== -->
+  <div id="mc-death-screen" class="mc-hidden">
+    <div class="mc-pause-card">
+      <h2 class="mc-death-title">You Died</h2>
+      <button id="mc-respawn-btn" class="mc-btn mc-btn-primary">Respawn</button>
+      <a href="/" class="mc-btn mc-btn-exit">Exit Game</a>
+    </div>
+  </div>
+
+  <!-- ===================== THREE.JS (CDN) ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- ===================== GAME MODULES ===================== -->
+  <script src="blocks.js"></script>
+  <script src="textures.js"></script>
+  <script src="world.js"></script>
+  <script src="player.js"></script>
+  <script src="inventory.js"></script>
+  <script src="ui.js"></script>
+  <script src="minecraft.js"></script>
+
+</body>
+</html>

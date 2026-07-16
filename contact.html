@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — SPIRAL</title>
+<meta name="description" content="Get in touch with Spiral for Discord bot development, Minecraft tooling, or XYZEN CLOUD hosting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark"><span>SPIRAL</span><div class="loader-bar"></div></div></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/hosting">Hosting</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ai">SPIRAL AI</a>
+      <a href="/contact" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">Contact</div>
+    <h1>Let's build something.</h1>
+    <p>Reach out about a bot, hosting, or a full project — I usually reply within 24 hours.</p>
+  </div>
+</div>
+
+<section id="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-card card">
+          <div class="ci-icon">✉️</div>
+          <div><span>Email</span><b>nasoohabdulla171@gmail.com</b></div>
+        </div>
+        <div class="contact-info-card card">
+          <div class="ci-icon">📞</div>
+          <div><span>Phone</span><b>+91 7909190233</b></div>
+        </div>
+        <div class="contact-info-card card">
+          <div class="ci-icon">💬</div>
+          <div><span>Discord</span><b>spirallleeeeh</b></div>
+        </div>
+        <div class="contact-info-card card">
+          <div class="ci-icon">📸</div>
+          <div><span>Instagram</span><b><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener" style="color:var(--accent-2);">@nasooh.abdulla</a></b></div>
+        </div>
+      </div>
+
+      <div class="form-card card reveal">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option>Bot Development</option>
+              <option>Minecraft Development</option>
+              <option>Web Development</option>
+              <option>Hosting Inquiry</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+        <p>Developer, hosting owner, and community founder building tools for Discord and Minecraft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/faq">FAQ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="/services">Bot Development</a></li><li><a href="/hosting">Hosting Plans</a></li><li><a href="/services">Web Development</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul><li><a href="/contact">Contact</a></li><li><a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener">Matrix RP Discord</a></li><li><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with <span class="heart">♥</span> by SPIRAL</span>
+      <span>© 2026 SPIRAL. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="/minecraft" class="play-fab hoverable" aria-label="Play Spiral Craft">
+  <span class="play-fab-icon">🎮</span>
+  <span class="play-fab-text">Play Spiral Craft</span>
+</a>
+
+<a href="/ai" class="ai-fab hoverable" aria-label="Chat with SPIRAL AI">
+  <span class="ai-fab-icon">💬</span>
+  <span class="ai-fab-text">Chat with AI</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+/* ==========================================================================
+   SPIRAL CRAFT — Game UI Stylesheet
+   Matches SPIRAL / XYZEN CLOUD design system (dark, glass, accent gradients)
+   ========================================================================== */
+
+:root {
+  --mc-bg: #05070A;
+  --mc-accent: #5865F2;
+  --mc-accent-2: #00D4FF;
+  --mc-green: #34D399;
+  --mc-red: #EF4444;
+  --mc-text: #FFFFFF;
+  --mc-text-dim: #A7B0C0;
+  --mc-card: rgba(17, 24, 39, 0.85);
+  --mc-border: rgba(255, 255, 255, 0.1);
+  --mc-font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --mc-font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  --mc-font-body: 'Inter', 'Segoe UI', sans-serif;
+  --mc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--mc-bg);
+  font-family: var(--mc-font-body);
+  color: var(--mc-text);
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+#mc-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+}
+
+.mc-hidden { display: none !important; }
+
+/* ===================== Loader ===================== */
+
+#mc-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--mc-bg);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-loader-inner { text-align: center; width: 320px; max-width: 90vw; }
+
+.mc-loader-mark {
+  font-family: var(--mc-font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.mc-loader-mark span {
+  background: linear-gradient(120deg, var(--mc-green), var(--mc-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mc-loader-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.mc-loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--mc-accent), var(--mc-accent-2), var(--mc-green));
+  transition: width 0.25s ease;
+}
+
+.mc-loader-status {
+  font-family: var(--mc-font-mono);
+  font-size: 0.85rem;
+  color: var(--mc-text-dim);
+}
+
+/* ===================== Start Screen ===================== */
+
+#mc-start-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(88,101,242,0.2), transparent), var(--mc-bg);
+}
+
+.mc-start-card {
+  text-align: center;
+  padding: 48px 40px;
+  border-radius: 24px;
+  background: var(--mc-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--mc-border);
+  width: 460px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.mc-start-sub {
+  color: var(--mc-text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+.mc-start-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin: 32px 0 24px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--mc-text-dim);
+}
+
+.mc-start-controls b {
+  color: var(--mc-accent-2);
+  font-family: var(--mc-font-mono);
+  margin-right: 6px;
+}
+
+.mc-exit-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--mc-text-dim);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.mc-exit-link:hover { color: var(--mc-accent-2); }
+
+/* ===================== Buttons ===================== */
+
+.mc-btn {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  margin-bottom: 12px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s var(--mc-ease), box-shadow 0.25s ease, background 0.25s ease;
+  font-family: inherit;
+}
+
+.mc-btn-primary {
+  background: linear-gradient(120deg, var(--mc-green), var(--mc-accent-2));
+  color: #04121A;
+  box-shadow: 0 6px 24px rgba(52,211,153,0.35);
+}
+.mc-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(52,211,153,0.5); }
+
+.mc-btn-ghost {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--mc-border);
+  color: var(--mc-text);
+}
+.mc-btn-ghost:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+.mc-btn-exit {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #f87171;
+}
+.mc-btn-exit:hover { background: rgba(239,68,68,0.2); transform: translateY(-2px); }
+
+/* ===================== HUD ===================== */
+
+#mc-hud {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.mc-debug-panel {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  background: rgba(5,7,10,0.55);
+  border: 1px solid var(--mc-border);
+  border-radius: 10px;
+  font-family: var(--mc-font-mono);
+  font-size: 0.75rem;
+  color: var(--mc-text-dim);
+  line-height: 1.6;
+  backdrop-filter: blur(6px);
+}
+
+.mc-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+.mc-crosshair-h, .mc-crosshair-v {
+  position: absolute;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+}
+.mc-crosshair-h { top: 50%; left: 0; width: 100%; height: 2px; transform: translateY(-50%); }
+.mc-crosshair-v { left: 50%; top: 0; width: 2px; height: 100%; transform: translateX(-50%); }
+
+/* Quick punch animation on the crosshair when a block is broken — a short
+   scale-and-flash pulse gives immediate feedback without touching the
+   3D scene, and works identically for mouse clicks and the touch button. */
+.mc-crosshair.mc-crosshair-hit {
+  animation: mc-crosshair-punch 140ms ease-out;
+}
+.mc-crosshair.mc-crosshair-hit .mc-crosshair-h,
+.mc-crosshair.mc-crosshair-hit .mc-crosshair-v {
+  background: rgba(255,90,90,0.95);
+}
+@keyframes mc-crosshair-punch {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  40%  { transform: translate(-50%, -50%) scale(1.6); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Mining/breaking animation: while a block is being held down on, the
+   crosshair scales up smoothly and shifts toward red as --mine-progress
+   goes from 0 to 1, giving a clear "this is about to break" cue. */
+.mc-crosshair.mc-crosshair-mining {
+  transform: translate(-50%, -50%) scale(calc(1 + var(--mine-progress, 0) * 0.5));
+  transition: transform 60ms linear;
+}
+.mc-crosshair.mc-crosshair-mining .mc-crosshair-h,
+.mc-crosshair.mc-crosshair-mining .mc-crosshair-v {
+  background: color-mix(in srgb, rgba(255,255,255,0.85) calc((1 - var(--mine-progress, 0)) * 100%), rgba(255,60,60,0.95) calc(var(--mine-progress, 0) * 100%));
+}
+
+.mc-status-bars {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mc-hearts, .mc-hunger {
+  display: flex;
+  gap: 3px;
+}
+
+.mc-heart, .mc-hunger-icon {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.mc-heart { color: #EF4444; }
+.mc-heart.mc-half { opacity: 0.5; }
+.mc-heart.mc-empty { opacity: 0.15; filter: grayscale(1); }
+
+.mc-hunger-icon { filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8)) saturate(1); }
+.mc-hunger-icon.mc-empty { opacity: 0.15; filter: grayscale(1); }
+
+.mc-hotbar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: rgba(5,7,10,0.55);
+  border: 1px solid var(--mc-border);
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+}
+
+.mc-hotbar-slot {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background: rgba(20,20,24,0.5);
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), inset 0 -2px 0 rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+.mc-hotbar-slot:hover { background: rgba(255,255,255,0.08); }
+
+.mc-hotbar-slot.selected {
+  border-color: #ffffff;
+  background: rgba(255,255,255,0.18);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.6), 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.mc-hotbar-icon {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  image-rendering: pixelated;
+  border-radius: 3px;
+}
+
+.mc-hotbar-key {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.6rem;
+  font-family: var(--mc-font-mono);
+  color: rgba(255,255,255,0.6);
+}
+
+.mc-hotbar-count {
+  position: absolute;
+  bottom: 1px;
+  right: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--mc-font-mono);
+  color: #ffffff;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.85), -1px -1px 0 rgba(0,0,0,0.85),
+               1px -1px 0 rgba(0,0,0,0.85), -1px 1px 0 rgba(0,0,0,0.85);
+  pointer-events: none;
+}
+
+.mc-icon-btn {
+  position: absolute;
+  top: 16px;
+  z-index: 600;
+  pointer-events: auto;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(20,20,24,0.45);
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+  color: var(--mc-text);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.mc-icon-btn:hover { background: rgba(255,255,255,0.15); }
+.mc-icon-btn:active { transform: scale(0.94); }
+
+#mc-block-tooltip {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: rgba(5,7,10,0.7);
+  border: 1px solid var(--mc-border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: var(--mc-font-mono);
+  backdrop-filter: blur(6px);
+}
+
+/* ===================== Pause / Death screens ===================== */
+
+#mc-pause-menu, #mc-death-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5,7,10,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.mc-pause-card {
+  text-align: center;
+  padding: 40px 36px;
+  border-radius: 24px;
+  background: var(--mc-card);
+  border: 1px solid var(--mc-border);
+  width: 380px;
+  max-width: 90vw;
+}
+
+.mc-pause-card h2 { font-family: var(--mc-font-display); font-size: 1.4rem; margin-bottom: 24px; }
+
+.mc-death-title {
+  font-family: var(--mc-font-display);
+  font-size: 1.8rem;
+  color: var(--mc-red);
+  margin-bottom: 28px;
+}
+
+/* ===================== Mobile Touch Controls — Bedrock Edition style ===================== */
+
+#mc-touch-controls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* D-pad: front/back/left/right square buttons arranged in a plus pattern,
+   bottom-left — replaces the old virtual joystick entirely. Built as a
+   CSS grid so each button has a fixed, non-overlapping cell — this is
+   what fixes the earlier "button position issue" (stacked transforms
+   fighting each other). */
+.mc-dpad {
+  position: absolute;
+  bottom: 26px;
+  left: 20px;
+  width: 190px;
+  height: 190px;
+  display: grid;
+  grid-template-columns: 62px 62px 62px;
+  grid-template-rows: 62px 62px 62px;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.mc-dpad-btn {
+  pointer-events: auto;
+  border-radius: 10px;
+  background: rgba(20,20,24,0.5);
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mc-dpad-up    { grid-column: 2; grid-row: 1; }
+.mc-dpad-left  { grid-column: 1; grid-row: 2; }
+.mc-dpad-right { grid-column: 3; grid-row: 2; }
+.mc-dpad-down  { grid-column: 2; grid-row: 3; }
+
+/* Look zone: invisible drag area over the right half of the screen,
+   exactly like Bedrock Edition's camera control (no visible base, just
+   a knob indicator that appears where the finger touches down) */
+.mc-look-zone {
+  position: absolute;
+  top: 70px; /* leave the top HUD icons (pause/fullscreen) clear of the drag zone */
+  right: 0;
+  width: 55%;
+  height: calc(100% - 70px);
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.mc-look-knob {
+  display: none; /* purely functional drag zone, no visible base ring */
+}
+
+/* Square action-button cluster, bottom-right — matches Bedrock's HUD
+   buttons: flat rounded squares with a soft border and icon glyph.
+   Sized up from the previous pass and given breathing room from the
+   screen edge so they're easier to hit reliably. */
+.mc-action-cluster {
+  position: absolute;
+  bottom: 26px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.mc-action-row {
+  display: flex;
+  gap: 12px;
+}
+
+.mc-square-btn {
+  width: 68px;
+  height: 68px;
+  border-radius: 12px;
+  background: rgba(20,20,24,0.5);
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
+}
+
+/* Pressed state driven by JS (touchstart/touchend), not just :active —
+   this stays visually correct even if the finger drags off the button
+   before release, instead of getting stuck highlighted or unhighlighted. */
+.mc-dpad-btn.mc-btn-pressed,
+.mc-square-btn.mc-btn-pressed,
+.mc-square-btn:active {
+  background: rgba(255,255,255,0.28);
+}
+
+.mc-btn-icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.6));
+}
+
+.mc-square-btn-jump {
+  width: 78px;
+  height: 78px;
+}
+.mc-square-btn-jump .mc-btn-icon { font-size: 2rem; }
+
+/* Break/attack button: fixed to the right of screen-center with plain
+   left/top positioning (no combined left% + transform, which is what
+   caused the earlier position glitch when the pressed state also tried
+   to apply a transform). */
+.mc-break-btn {
+  position: absolute;
+  bottom: 232px;
+  left: 20px;
+  width: 74px;
+  height: 74px;
+  border-radius: 12px;
+  background: rgba(239,68,68,0.3);
+  border: 2px solid rgba(255,255,255,0.4);
+  pointer-events: auto;
+}
+.mc-break-btn.mc-btn-pressed,
+.mc-break-btn:active {
+  background: rgba(239,68,68,0.5);
+}
+
+/* ===================== Responsive ===================== */
+
+@media (max-width: 640px) {
+  .mc-debug-panel { font-size: 0.65rem; padding: 6px 10px; }
+  .mc-hotbar-slot { width: 40px; height: 40px; }
+  .mc-hotbar-icon { width: 26px; height: 26px; }
+  .mc-status-bars { bottom: 100px; }
+  .mc-start-controls { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .mc-dpad { bottom: 20px; left: 14px; width: 172px; height: 172px; grid-template-columns: 56px 56px 56px; grid-template-rows: 56px 56px 56px; }
+  .mc-action-cluster { bottom: 20px; right: 14px; gap: 10px; }
+  .mc-square-btn { width: 60px; height: 60px; }
+  .mc-square-btn-jump { width: 68px; height: 68px; }
+  .mc-btn-icon { font-size: 1.5rem; }
+  .mc-break-btn { width: 64px; height: 64px; bottom: 202px; left: 14px; }
+}
+
+/* Landscape phones: keep controls from overlapping when short on height */
+@media (max-height: 420px) {
+  .mc-dpad { bottom: 10px; }
+  .mc-action-cluster { bottom: 10px; }
+  .mc-break-btn { bottom: 216px; }
+}

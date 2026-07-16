@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — SPIRAL</title>
+<meta name="description" content="Spiral's portfolio: Discord bots, Minecraft servers, hosting systems, websites, and dashboards, plus MATRIX ROLEPLAY and XYZEN CLOUD communities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark"><span>SPIRAL</span><div class="loader-bar"></div></div></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/hosting">Hosting</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ai">SPIRAL AI</a>
+      <a href="/contact" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">Portfolio</div>
+    <h1>Everything, filtered by category.</h1>
+    <p>Discord bots, Minecraft servers, hosting systems, websites, and dashboards — all in one place.</p>
+  </div>
+</div>
+
+<section id="portfolio-grid">
+  <div class="container">
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bots">Discord Bots</button>
+      <button class="filter-btn" data-filter="minecraft">Minecraft Servers</button>
+      <button class="filter-btn" data-filter="hosting">Hosting Systems</button>
+      <button class="filter-btn" data-filter="web">Websites</button>
+      <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+    </div>
+
+    <div class="grid-3">
+      <div class="card project-card portfolio-item show reveal" data-cat="bots">
+        <div class="project-shot"><span class="ph-icon">🛰️</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN Management Bot</h3><p>Pterodactyl panel manager with expiry automation.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="bots">
+        <div class="project-shot"><span class="ph-icon">🧠</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN AI Bot</h3><p>Conversational AI assistant for Discord servers.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="bots">
+        <div class="project-shot"><span class="ph-icon">🌐</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN Public Bot</h3><p>All-in-one utility and moderation bot.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="minecraft">
+        <div class="project-shot"><span class="ph-icon">🏝️</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>THANAL MC Server Bot</h3><p>Whitelist and status automation for Minecraft.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="hosting">
+        <div class="project-shot"><span class="ph-icon">📦</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN VPS Deploy Bot</h3><p>Automated VPS provisioning for XYZEN CLOUD.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="bots minecraft" data-cat2="minecraft">
+        <div class="project-shot"><span class="ph-icon">🗂️</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>Matrix Management Bot</h3><p>Staff tooling and moderation for MATRIX ROLEPLAY.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="web">
+        <div class="project-shot"><span class="ph-icon">🎭</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>MATRIX ROLEPLAY Website</h3><p>Single-page site with store, tickets, and QR payments.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="dashboard">
+        <div class="project-shot"><span class="ph-icon">📊</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN CLOUD Panel</h3><p>Customer-facing hosting management dashboard.</p></div>
+      </div>
+      <div class="card project-card portfolio-item show reveal" data-cat="hosting">
+        <div class="project-shot"><span class="ph-icon">🖥️</span><span class="status-badge">Live</span></div>
+        <div class="project-body"><h3>XYZEN CLOUD Infrastructure</h3><p>Full Pterodactyl-based hosting backend.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="communities" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Communities</div>
+      <h2>Platforms I run</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card community-card reveal">
+        <div class="community-banner"><img src="matrix-rp.jpg" alt="MATRIX ROLEPLAY logo" loading="lazy"></div>
+        <div class="community-body">
+          <h3>MATRIX ROLEPLAY</h3>
+          <p>A SA-MP roleplay server built for the Malayali gaming community.</p>
+          <a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Join Discord →</a>
+        </div>
+      </div>
+      <div class="card community-card reveal">
+        <div class="community-banner"><img src="xyzen-public-bot.jpg" alt="XYZEN Public Bot logo" loading="lazy"></div>
+        <div class="community-body">
+          <h3>XYZEN PUBLIC BOT</h3>
+          <p>Free all-in-one utility bot, open to any Discord server.</p>
+          <a href="https://discord.gg/MW4UaRVjzx" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Add / Join →</a>
+        </div>
+      </div>
+      <div class="card community-card reveal">
+        <div class="community-banner"><img src="xyzen-cloud.jpg" alt="XYZEN CLOUD banner" loading="lazy"></div>
+        <div class="community-body">
+          <h3>XYZEN CLOUD</h3>
+          <p>Hosting company for Minecraft, bots, web, and VPS.</p>
+          <a href="https://discord.gg/BeUQaCExZm" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Join Discord →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gaming">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gaming</div>
+      <h2>Where you'll find me in-game</h2>
+    </div>
+    <div class="grid-4">
+      <div class="game-card card reveal"><div class="game-icon">⛏️</div><h4>Minecraft</h4><div class="ign">SPIR4L7733</div></div>
+      <div class="game-card card reveal"><div class="game-icon">🔥</div><h4>Free Fire (UID)</h4><div class="ign">1100982036</div></div>
+      <div class="game-card card reveal"><div class="game-icon">🚗</div><h4>SA-MP</h4><div class="ign">NJK SPIRAL</div></div>
+      <div class="game-card card reveal"><div class="game-icon">🎮</div><h4>Roblox</h4><div class="ign">Player</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Testimonials</div>
+      <h2>What clients say</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"The management bot Spiral built handles everything on our panel automatically now. Saved us hours every week."</p>
+        <div class="testimonial-author"><div class="author-avatar">R</div><div class="author-meta"><b>Server Owner</b><span>Minecraft Network</span></div></div>
+      </div>
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Fast responses, clean code, and the hosting has been rock solid since we switched to XYZEN CLOUD."</p>
+        <div class="testimonial-author"><div class="author-avatar">A</div><div class="author-meta"><b>Community Admin</b><span>Discord Server</span></div></div>
+      </div>
+      <div class="card testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"MATRIX ROLEPLAY's bot and website both feel premium. Great attention to detail throughout."</p>
+        <div class="testimonial-author"><div class="author-avatar">K</div><div class="author-meta"><b>MXRP Member</b><span>SA-MP Community</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Like what you see?</h2>
+      <p>Let's talk about what you're building next.</p>
+      <div class="cta-band-actions">
+        <a href="/contact" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+        <p>Developer, hosting owner, and community founder building tools for Discord and Minecraft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/faq">FAQ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="/services">Bot Development</a></li><li><a href="/hosting">Hosting Plans</a></li><li><a href="/services">Web Development</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul><li><a href="/contact">Contact</a></li><li><a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener">Matrix RP Discord</a></li><li><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with <span class="heart">♥</span> by SPIRAL</span>
+      <span>© 2026 SPIRAL. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="/minecraft" class="play-fab hoverable" aria-label="Play Spiral Craft">
+  <span class="play-fab-icon">🎮</span>
+  <span class="play-fab-text">Play Spiral Craft</span>
+</a>
+
+<a href="/ai" class="ai-fab hoverable" aria-label="Chat with SPIRAL AI">
+  <span class="ai-fab-icon">💬</span>
+  <span class="ai-fab-text">Chat with AI</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

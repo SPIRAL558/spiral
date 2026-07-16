@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — SPIRAL</title>
+<meta name="description" content="Discord bots and Minecraft tooling built by Spiral: XYZEN Management Bot, XYZEN AI Bot, XYZEN VPS Deploy Bot, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark"><span>SPIRAL</span><div class="loader-bar"></div></div></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/hosting">Hosting</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ai">SPIRAL AI</a>
+      <a href="/contact" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">Projects</div>
+    <h1>Bots and systems in production.</h1>
+    <p>Six builds spanning Discord automation, hosting management, and Minecraft server tooling.</p>
+  </div>
+</div>
+
+<section id="projects-list">
+  <div class="container">
+    <div class="grid-3">
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">🏝️</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>THANAL MC SERVER BOT</h3>
+          <p>Companion bot for a Minecraft server community, handling whitelist requests, server status updates, and player engagement features.</p>
+          <div class="stack-row"><span class="stack-chip">Python</span><span class="stack-chip">discord.py</span><span class="stack-chip">SQLite</span><span class="stack-chip">Minecraft RCON</span></div>
+          <ul class="feature-list">
+            <li>Automated whitelist requests</li>
+            <li>Live server status embeds</li>
+            <li>Player activity logging</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">🛰️</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>XYZEN MANAGEMENT BOT</h3>
+          <p>A full Pterodactyl panel management bot with automatic server expiry, renewal reminders, and a complete suite of slash commands across multiple cogs.</p>
+          <div class="stack-row"><span class="stack-chip">discord.py 2.x</span><span class="stack-chip">app_commands</span><span class="stack-chip">SQLite</span><span class="stack-chip">Pterodactyl API</span></div>
+          <ul class="feature-list">
+            <li>Automatic expiry &amp; reminder automation</li>
+            <li>Multi-cog slash command architecture</li>
+            <li>Async server provisioning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">🧠</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>XYZEN AI BOT</h3>
+          <p>Conversational AI assistant that plugs directly into Discord servers, handling member questions and support in real time.</p>
+          <div class="stack-row"><span class="stack-chip">Python</span><span class="stack-chip">discord.py</span><span class="stack-chip">API Integration</span></div>
+          <ul class="feature-list">
+            <li>Context-aware responses</li>
+            <li>Slash command interface</li>
+            <li>Per-server configuration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">📦</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>XYZEN VPS DEPLOY BOT</h3>
+          <p>Automates VPS provisioning and deployment for XYZEN CLOUD customers directly from Discord, cutting manual setup time.</p>
+          <div class="stack-row"><span class="stack-chip">Python</span><span class="stack-chip">Async</span><span class="stack-chip">Pterodactyl API</span><span class="stack-chip">SQLite</span></div>
+          <ul class="feature-list">
+            <li>One-command VPS deployment</li>
+            <li>Order tracking &amp; status updates</li>
+            <li>Automated resource allocation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">🌐</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>XYZEN PUBLIC BOT</h3>
+          <p>The XYZEN All-In-One public bot, offering utility, moderation, and fun commands to any server that invites it.</p>
+          <div class="stack-row"><span class="stack-chip">discord.py 2.x</span><span class="stack-chip">SQLite</span><span class="stack-chip">Multi-cog</span></div>
+          <ul class="feature-list">
+            <li>All-in-one utility &amp; moderation</li>
+            <li>Per-server profile customization</li>
+            <li>Public, multi-server ready</li>
+          </ul>
+          <a href="https://discord.gg/MW4UaRVjzx" target="_blank" rel="noopener" class="btn btn-ghost btn-sm btn-block">Invite Bot / Discord →</a>
+        </div>
+      </div>
+
+      <div class="card project-card reveal">
+        <div class="project-shot"><span class="ph-icon">🗂️</span><span class="status-badge">Live</span></div>
+        <div class="project-body">
+          <h3>MATRIX MANAGEMENT BOT</h3>
+          <p>The backbone bot for MATRIX ROLEPLAY, managing staff tools, join logging, and community moderation for the SA-MP server.</p>
+          <div class="stack-row"><span class="stack-chip">Python</span><span class="stack-chip">discord.py</span><span class="stack-chip">SQLite</span></div>
+          <ul class="feature-list">
+            <li>Staff &amp; moderation tooling</li>
+            <li>Join logging &amp; welcome system</li>
+            <li>Custom variable replacement</li>
+          </ul>
+          <a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener" class="btn btn-ghost btn-sm btn-block">Join Matrix RP →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Need something similar built?</h2>
+      <p>Whether it's a management bot, an AI assistant, or full hosting automation — I can build it.</p>
+      <div class="cta-band-actions">
+        <a href="/contact" class="btn btn-primary">Start a Project</a>
+        <a href="/services" class="btn btn-ghost">View Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+        <p>Developer, hosting owner, and community founder building tools for Discord and Minecraft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/faq">FAQ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="/services">Bot Development</a></li><li><a href="/hosting">Hosting Plans</a></li><li><a href="/services">Web Development</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul><li><a href="/contact">Contact</a></li><li><a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener">Matrix RP Discord</a></li><li><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with <span class="heart">♥</span> by SPIRAL</span>
+      <span>© 2026 SPIRAL. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="/minecraft" class="play-fab hoverable" aria-label="Play Spiral Craft">
+  <span class="play-fab-icon">🎮</span>
+  <span class="play-fab-text">Play Spiral Craft</span>
+</a>
+
+<a href="/ai" class="ai-fab hoverable" aria-label="Chat with SPIRAL AI">
+  <span class="ai-fab-icon">💬</span>
+  <span class="ai-fab-text">Chat with AI</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

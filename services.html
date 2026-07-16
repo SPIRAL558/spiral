@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Skills — SPIRAL</title>
+<meta name="description" content="Discord bot development, Minecraft server tooling, web development, and hosting services offered by Spiral.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark"><span>SPIRAL</span><div class="loader-bar"></div></div></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/hosting">Hosting</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ai">SPIRAL AI</a>
+      <a href="/contact" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">Services</div>
+    <h1>What I can build for you.</h1>
+    <p>From a single custom bot to full hosting infrastructure — here's what's on offer.</p>
+  </div>
+</div>
+
+<section id="services-list">
+  <div class="container">
+    <div class="grid-3">
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">🤖</div>
+        <h3>Discord Bot Development</h3>
+        <p>Custom bots built with discord.py — moderation, management, AI integration, and full slash-command suites, tailored to your server.</p>
+      </div>
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">⛏️</div>
+        <h3>Minecraft Development</h3>
+        <p>Server-side bots and tooling: whitelisting, RCON integration, status monitoring, and community automation.</p>
+      </div>
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">🌐</div>
+        <h3>Web Development</h3>
+        <p>Single-page and multi-page websites with modern design — landing pages, community sites, and dashboards.</p>
+      </div>
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">☁️</div>
+        <h3>Hosting Setup &amp; Management</h3>
+        <p>Pterodactyl panel configuration, VPS provisioning, and ongoing infrastructure management via XYZEN CLOUD.</p>
+      </div>
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">🗄️</div>
+        <h3>Database &amp; API Integration</h3>
+        <p>SQLite-backed persistence layers and API integrations, built async-first for reliability at scale.</p>
+      </div>
+      <div class="card project-body reveal" style="padding:32px;">
+        <div class="skill-icon" style="width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(140deg,rgba(88,101,242,0.2),rgba(0,212,255,0.1));margin-bottom:20px;">🛠️</div>
+        <h3>Ongoing Maintenance</h3>
+        <p>Bug fixes, feature additions, and long-term support for existing bots and community platforms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Technical Skills</div>
+      <h2>Tools &amp; technologies</h2>
+      <p>The stack behind every bot, server, and hosting system I build.</p>
+    </div>
+    <div class="grid-3">
+      <div class="skill-card card reveal"><div class="skill-icon">🐍</div><div class="skill-body"><h4>Python</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:95%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🤖</div><div class="skill-body"><h4>Discord.py</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:95%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🗄️</div><div class="skill-body"><h4>Database (SQLite)</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:88%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🟨</div><div class="skill-body"><h4>JavaScript</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:82%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🧱</div><div class="skill-body"><h4>HTML &amp; CSS</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:88%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🟩</div><div class="skill-body"><h4>Node.js / Express</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:70%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🐧</div><div class="skill-body"><h4>Linux</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:80%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🐳</div><div class="skill-body"><h4>Docker</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:72%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🦅</div><div class="skill-body"><h4>Pterodactyl</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:90%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">⛏️</div><div class="skill-body"><h4>Minecraft</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:85%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🔌</div><div class="skill-body"><h4>API Development</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:83%"></div></div></div></div>
+      <div class="skill-card card reveal"><div class="skill-icon">🐙</div><div class="skill-body"><h4>GitHub</h4><div class="skill-bar"><div class="skill-bar-fill" style="--pct:78%"></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Ready to start?</h2>
+      <p>Tell me what you need and I'll scope it out — no obligation.</p>
+      <div class="cta-band-actions">
+        <a href="/contact" class="btn btn-primary">Contact Me</a>
+        <a href="/hosting" class="btn btn-ghost">See Hosting Plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+        <p>Developer, hosting owner, and community founder building tools for Discord and Minecraft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/faq">FAQ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="/services">Bot Development</a></li><li><a href="/hosting">Hosting Plans</a></li><li><a href="/services">Web Development</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul><li><a href="/contact">Contact</a></li><li><a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener">Matrix RP Discord</a></li><li><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with <span class="heart">♥</span> by SPIRAL</span>
+      <span>© 2026 SPIRAL. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="/ai" class="ai-fab hoverable" aria-label="Chat with SPIRAL AI">
+  <span class="ai-fab-icon">💬</span>
+  <span class="ai-fab-text">Chat with AI</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

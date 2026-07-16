@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosting — XYZEN CLOUD | SPIRAL</title>
+<meta name="description" content="XYZEN CLOUD hosting — Minecraft, Discord bot, web, and VPS hosting on AMD EPYC and Intel Xeon hardware with NVMe SSD and DDoS protection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-mark"><span>SPIRAL</span><div class="loader-bar"></div></div></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/services">Services</a>
+      <a href="/hosting">Hosting</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQ</a>
+      <a href="/ai">SPIRAL AI</a>
+      <a href="/contact" class="nav-cta">Hire Me</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="eyebrow">XYZEN CLOUD</div>
+    <h1>Hosting worth switching for.</h1>
+    <p>Minecraft, Discord bot, web, and VPS hosting on premium AMD EPYC and Intel Xeon hardware — 99.9% uptime, NVMe SSD, and real 24/7 support.</p>
+  </div>
+</div>
+
+<section id="hosting-plans">
+  <div class="container">
+
+    <div class="hosting-category-tabs reveal">
+      <button class="cat-tab active" data-cat="minecraft">Minecraft Hosting</button>
+      <button class="cat-tab" data-cat="bot">Discord Bot Hosting</button>
+      <button class="cat-tab" data-cat="web">Web Hosting</button>
+      <button class="cat-tab" data-cat="vps">VPS Hosting</button>
+    </div>
+
+    <div class="pricing-toggle reveal">
+      <div class="toggle-group glass">
+        <button class="toggle-btn active" data-mode="monthly">Monthly</button>
+        <button class="toggle-btn" data-mode="yearly">Yearly (2 months free)</button>
+      </div>
+    </div>
+
+    <!-- MINECRAFT -->
+    <div class="pricing-group grid-3 active" data-group="minecraft">
+      <div class="card price-card reveal" data-monthly="₹199/mo" data-yearly="₹1,990/yr">
+        <h3>Sapling</h3>
+        <p class="plan-desc">For small survival or friend-group servers</p>
+        <div class="price"><span class="price-amount">₹199/mo</span></div>
+        <div class="price-period">2GB RAM · NVMe SSD</div>
+        <ul>
+          <li>2GB Dedicated RAM</li>
+          <li>NVMe SSD Storage</li>
+          <li>DDoS Protection</li>
+          <li>Automatic Backups</li>
+          <li>Pterodactyl Panel Access</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+      <div class="card price-card featured reveal" data-monthly="₹449/mo" data-yearly="₹4,490/yr">
+        <span class="popular-tag">Most Popular</span>
+        <h3>Forest</h3>
+        <p class="plan-desc">For modded packs and active communities</p>
+        <div class="price"><span class="price-amount">₹449/mo</span></div>
+        <div class="price-period">6GB RAM · NVMe SSD</div>
+        <ul>
+          <li>6GB Dedicated RAM</li>
+          <li>AMD EPYC 7 vCPU</li>
+          <li>NVMe SSD Storage</li>
+          <li>DDoS Protection</li>
+          <li>Automatic Daily Backups</li>
+          <li>Priority 24/7 Support</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary btn-block">Order Now</a>
+      </div>
+      <div class="card price-card reveal" data-monthly="₹899/mo" data-yearly="₹8,990/yr">
+        <h3>Canopy</h3>
+        <p class="plan-desc">For large networks and public servers</p>
+        <div class="price"><span class="price-amount">₹899/mo</span></div>
+        <div class="price-period">12GB RAM · NVMe SSD</div>
+        <ul>
+          <li>12GB Dedicated RAM</li>
+          <li>AMD EPYC 9 vCPU</li>
+          <li>NVMe SSD Storage</li>
+          <li>DDoS Protection</li>
+          <li>Automatic Backups</li>
+          <li>99.9% Uptime SLA</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+    </div>
+
+    <!-- DISCORD BOT -->
+    <div class="pricing-group grid-3" data-group="bot">
+      <div class="card price-card reveal" data-monthly="₹99/mo" data-yearly="₹990/yr">
+        <h3>Starter Bot</h3>
+        <p class="plan-desc">For a single lightweight bot</p>
+        <div class="price"><span class="price-amount">₹99/mo</span></div>
+        <div class="price-period">512MB RAM · 24/7 Uptime</div>
+        <ul>
+          <li>512MB RAM</li>
+          <li>24/7 Uptime</li>
+          <li>NVMe SSD Storage</li>
+          <li>Pterodactyl Panel</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+      <div class="card price-card featured reveal" data-monthly="₹249/mo" data-yearly="₹2,490/yr">
+        <span class="popular-tag">Most Popular</span>
+        <h3>Pro Bot</h3>
+        <p class="plan-desc">For active bots with databases</p>
+        <div class="price"><span class="price-amount">₹249/mo</span></div>
+        <div class="price-period">2GB RAM · Priority Support</div>
+        <ul>
+          <li>2GB RAM</li>
+          <li>24/7 Uptime</li>
+          <li>SQLite/DB Support</li>
+          <li>Automatic Restarts</li>
+          <li>Priority 24/7 Support</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary btn-block">Order Now</a>
+      </div>
+      <div class="card price-card reveal" data-monthly="₹499/mo" data-yearly="₹4,990/yr">
+        <h3>Multi-Bot</h3>
+        <p class="plan-desc">For running several bots on one node</p>
+        <div class="price"><span class="price-amount">₹499/mo</span></div>
+        <div class="price-period">4GB RAM · Multi-instance</div>
+        <ul>
+          <li>4GB RAM</li>
+          <li>Multiple Bot Instances</li>
+          <li>NVMe SSD Storage</li>
+          <li>Automatic Backups</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+    </div>
+
+    <!-- WEB HOSTING -->
+    <div class="pricing-group grid-3" data-group="web">
+      <div class="card price-card reveal" data-monthly="₹149/mo" data-yearly="₹1,490/yr">
+        <h3>Static</h3>
+        <p class="plan-desc">For single-page sites and portfolios</p>
+        <div class="price"><span class="price-amount">₹149/mo</span></div>
+        <div class="price-period">5GB Storage · nginx</div>
+        <ul>
+          <li>5GB NVMe Storage</li>
+          <li>Free SSL Certificate</li>
+          <li>nginx Hosting</li>
+          <li>DDoS Protection</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+      <div class="card price-card featured reveal" data-monthly="₹349/mo" data-yearly="₹3,490/yr">
+        <span class="popular-tag">Most Popular</span>
+        <h3>Dynamic</h3>
+        <p class="plan-desc">For Node.js apps and dashboards</p>
+        <div class="price"><span class="price-amount">₹349/mo</span></div>
+        <div class="price-period">2GB RAM · Node.js/Express</div>
+        <ul>
+          <li>2GB RAM</li>
+          <li>Node.js / Express Ready</li>
+          <li>Free SSL Certificate</li>
+          <li>Automatic Backups</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary btn-block">Order Now</a>
+      </div>
+      <div class="card price-card reveal" data-monthly="₹699/mo" data-yearly="₹6,990/yr">
+        <h3>Business</h3>
+        <p class="plan-desc">For production apps with databases</p>
+        <div class="price"><span class="price-amount">₹699/mo</span></div>
+        <div class="price-period">4GB RAM · Full Stack</div>
+        <ul>
+          <li>4GB RAM</li>
+          <li>Database Included</li>
+          <li>Free SSL Certificate</li>
+          <li>99.9% Uptime SLA</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+    </div>
+
+    <!-- VPS -->
+    <div class="pricing-group grid-3" data-group="vps">
+      <div class="card price-card reveal" data-monthly="₹599/mo" data-yearly="₹5,990/yr">
+        <h3>VPS EPYC 7</h3>
+        <p class="plan-desc">AMD EPYC 7 series — balanced performance</p>
+        <div class="price"><span class="price-amount">₹599/mo</span></div>
+        <div class="price-period">4 vCPU · 8GB RAM · NVMe</div>
+        <ul>
+          <li>AMD EPYC 7 vCPU ×4</li>
+          <li>8GB RAM</li>
+          <li>NVMe SSD Storage</li>
+          <li>DDoS Protection</li>
+          <li>Full Root Access</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+      <div class="card price-card featured reveal" data-monthly="₹1,199/mo" data-yearly="₹11,990/yr">
+        <span class="popular-tag">Most Popular</span>
+        <h3>VPS EPYC 9</h3>
+        <p class="plan-desc">AMD EPYC 9 series — top-tier performance</p>
+        <div class="price"><span class="price-amount">₹1,199/mo</span></div>
+        <div class="price-period">8 vCPU · 16GB RAM · NVMe</div>
+        <ul>
+          <li>AMD EPYC 9 vCPU ×8</li>
+          <li>16GB RAM</li>
+          <li>NVMe SSD Storage</li>
+          <li>Low Latency Network</li>
+          <li>Priority 24/7 Support</li>
+        </ul>
+        <a href="/contact" class="btn btn-primary btn-block">Order Now</a>
+      </div>
+      <div class="card price-card reveal" data-monthly="₹899/mo" data-yearly="₹8,990/yr">
+        <h3>VPS Xeon</h3>
+        <p class="plan-desc">Intel Xeon — reliable enterprise-grade compute</p>
+        <div class="price"><span class="price-amount">₹899/mo</span></div>
+        <div class="price-period">6 vCPU · 12GB RAM · NVMe</div>
+        <ul>
+          <li>Intel Xeon vCPU ×6</li>
+          <li>12GB RAM</li>
+          <li>NVMe SSD Storage</li>
+          <li>Automatic Backups</li>
+        </ul>
+        <a href="/contact" class="btn btn-ghost btn-block">Order Now</a>
+      </div>
+    </div>
+
+    <div class="feature-strip">
+      <div class="fs-item glass reveal"><div class="fs-icon">⚡</div><h4>Low Latency</h4><p>Optimized network routing</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">🕒</div><h4>24/7 Support</h4><p>Real replies, always on</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">🖥️</div><h4>Premium Hardware</h4><p>AMD EPYC &amp; Intel Xeon</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">💾</div><h4>NVMe SSD</h4><p>Fast storage, every plan</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">🛡️</div><h4>DDoS Protection</h4><p>Always-on mitigation</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">🔄</div><h4>Automatic Backups</h4><p>Your data, protected</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">📈</div><h4>99.9% Uptime</h4><p>Reliability you can count on</p></div>
+      <div class="fs-item glass reveal"><div class="fs-icon">🦅</div><h4>Pterodactyl Panel</h4><p>Full self-service control</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Not sure which plan fits?</h2>
+      <p>Tell me what you're running and I'll recommend the right setup — no upsell.</p>
+      <div class="cta-band-actions">
+        <a href="/contact" class="btn btn-primary">Talk to Me</a>
+        <a href="https://discord.gg/BeUQaCExZm" target="_blank" rel="noopener" class="btn btn-ghost">XYZEN CLOUD Discord</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="dot"></span>SPIRAL</a>
+        <p>Developer, hosting owner, and community founder building tools for Discord and Minecraft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/faq">FAQ</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="/services">Bot Development</a></li><li><a href="/hosting">Hosting Plans</a></li><li><a href="/services">Web Development</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul><li><a href="/contact">Contact</a></li><li><a href="https://discord.gg/wFHjYXXbAR" target="_blank" rel="noopener">Matrix RP Discord</a></li><li><a href="https://www.instagram.com/nasooh.abdulla" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Made with <span class="heart">♥</span> by SPIRAL</span>
+      <span>© 2026 SPIRAL. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="/minecraft" class="play-fab hoverable" aria-label="Play Spiral Craft">
+  <span class="play-fab-icon">🎮</span>
+  <span class="play-fab-text">Play Spiral Craft</span>
+</a>
+
+<a href="/ai" class="ai-fab hoverable" aria-label="Chat with SPIRAL AI">
+  <span class="ai-fab-icon">💬</span>
+  <span class="ai-fab-text">Chat with AI</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
