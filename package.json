@@ -1,0 +1,16 @@
+{
+  "name": "spiral-site",
+  "version": "1.0.0",
+  "description": "SPIRAL personal portfolio and XYZEN CLOUD hosting site with SPIRAL AI chat assistant.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+} }
+}
